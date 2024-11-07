@@ -16,10 +16,10 @@ describe('초기 상태', () => {
 
   it('holidays는 10월 휴일인 개천절, 한글날이 지정되어 있어야 한다', () => {
     const { result } = renderHook(() => useCalendarView());
-    expect(result.current.holidays).toEqual([
-      { date: '2024-10-03', title: '개천절' },
-      { date: '2024-10-09', title: '한글날' },
-    ]);
+    expect(result.current.holidays).toEqual({
+      '2024-10-03': '개천절',
+      '2024-10-09': '한글날',
+    });
   });
 });
 
@@ -40,7 +40,7 @@ it("주간 뷰에서 다음으로 navigate시 7일 후 '2024-10-08' 날짜로 �
   assertDate(result.current.currentDate, new Date('2024-10-08'));
 });
 
-it("주간 뷰에서 이전으로 navigate시 7일 후 '2024-09-24' 날짜로 지정이 된다", () => {
+it("주간 뷰에서 이전으로 navigate시 7일 전 '2024-09-24' 날짜로 지정이 된다", () => {
   const { result } = renderHook(() => useCalendarView());
   act(() => {
     result.current.setView('week');
