@@ -8,6 +8,7 @@ import {
   HStack,
   Input,
   Select,
+  useToast,
   VStack,
 } from '@chakra-ui/react';
 
@@ -53,6 +54,8 @@ export const EventForm = ({ event, onSubmit, onCancel }: EventFormProps) => {
     handleEndTimeChange,
     validateForm,
   } = useEventForm(event);
+
+  const toast = useToast();
 
   const handleSubmit = () => {
     const errorMessage = validateForm();

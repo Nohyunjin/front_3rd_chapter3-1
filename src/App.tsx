@@ -8,11 +8,11 @@ import { EventList } from './components/EventList.tsx';
 import { EventNotification } from './components/EventNotification.tsx';
 import { useEventOperations } from './hooks/useEventOperations.ts';
 import { useNotifications } from './hooks/useNotifications.ts';
-import { Event } from './types';
+import { Event, EventForm } from './types';
 import { findOverlappingEvents } from './utils/eventOverlap';
 
 function App() {
-  const { events, saveEvent, deleteEvent } = useEventOperations();
+  const { events, saveEvent, deleteEvent } = useEventOperations(events);
   const { notifications, notifiedEvents, setNotifications } = useNotifications(events);
   const [editingEvent, setEditingEvent] = useState<Event | null>(null);
   const [isOverlapDialogOpen, setIsOverlapDialogOpen] = useState(false);
