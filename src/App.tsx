@@ -1,16 +1,15 @@
 import { Box, Flex } from '@chakra-ui/react';
 import { useRef, useState } from 'react';
 
-import { useNotifications } from './hooks/useNotifications.ts';
-import { Event } from './types';
-import { findOverlappingEvents } from './utils/eventOverlap';
-
 import { CalendarContainer } from './components/calendar/CalendarContainer.tsx';
 import { EventDialog } from './components/EventDialog.tsx';
 import { EventFormContainer } from './components/EventForm.tsx';
 import { EventList } from './components/EventList.tsx';
 import { EventNotification } from './components/EventNotification.tsx';
 import { useEventOperations } from './hooks/useEventOperations.ts';
+import { useNotifications } from './hooks/useNotifications.ts';
+import { Event } from './types';
+import { findOverlappingEvents } from './utils/eventOverlap';
 
 function App() {
   const { events, saveEvent, deleteEvent } = useEventOperations();

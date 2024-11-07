@@ -10,6 +10,7 @@ import {
   Select,
   VStack,
 } from '@chakra-ui/react';
+
 import { CATEGORIES, NOTIFICATION_OPTIONS } from '../../constants/calendar';
 import { useEventForm } from '../../hooks/useEventForm';
 import { Event, EventForm as EventFormType } from '../../types';

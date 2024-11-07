@@ -9,12 +9,13 @@ import {
   useToast,
   VStack,
 } from '@chakra-ui/react';
-import { CATEGORIES, NOTIFICATION_OPTIONS } from '../constants/calendar';
-import { useEventForm } from '../hooks/useEventForm';
-import { createEventData, validateEventData } from '../utils/eventHandlers';
+
 import { RepeatForm } from './RepeatForm.tsx';
 import { TimeInputs } from './TimeInputs.tsx';
 import { Event, EventForm as EventFormType } from './types';
+import { CATEGORIES, NOTIFICATION_OPTIONS } from '../constants/calendar';
+import { useEventForm } from '../hooks/useEventForm';
+import { createEventData, validateEventData } from '../utils/eventHandlers';
 
 interface EventFormContainerProps {
   editingEvent: Event | null;

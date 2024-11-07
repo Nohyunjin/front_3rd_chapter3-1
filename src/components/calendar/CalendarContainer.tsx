@@ -1,8 +1,9 @@
 import { Heading, VStack } from '@chakra-ui/react';
-import { useCalendarView } from '../../hooks/useCalendarView';
+
 import { CalendarHeader } from './CalendarHeader';
 import { MonthView } from './MonthView';
 import { WeekView } from './WeekView';
+import { useCalendarView } from '../../hooks/useCalendarView';
 
 interface CalendarContainerProps {
   events: Event[];

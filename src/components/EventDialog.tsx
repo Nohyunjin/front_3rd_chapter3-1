@@ -9,6 +9,7 @@ import {
   Text,
 } from '@chakra-ui/react';
 import { RefObject } from 'react';
+
 import { Event } from '../types';
 
 interface EventDialogProps {

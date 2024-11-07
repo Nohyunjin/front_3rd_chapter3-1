@@ -1,4 +1,5 @@
 import { Alert, AlertIcon, AlertTitle, Box, CloseButton, VStack } from '@chakra-ui/react';
+
 import { Notification } from '../types';
 
 interface EventNotificationProps {
