@@ -7,8 +7,8 @@ import { Event } from '../types';
 interface EventItemsProps {
   events: Event[];
   notifiedEvents: string[];
-  onEdit: (event: Event) => void;
-  onDelete: (id: string) => void;
+  onEdit: () => void;
+  onDelete: () => void;
 }
 
 export const EventItem = ({ events, notifiedEvents, onEdit, onDelete }: EventItemsProps) => {

@@ -7,9 +7,9 @@ interface RepeatFormProps {
   repeatInterval: number;
   repeatEndDate: string;
   startDate: string;
-  onRepeatTypeChange: (type: RepeatType) => void;
-  onRepeatIntervalChange: (interval: number) => void;
-  onRepeatEndDateChange: (date: string) => void;
+  onRepeatTypeChange: () => void;
+  onRepeatIntervalChange: () => void;
+  onRepeatEndDateChange: () => void;
 }
 
 export const RepeatForm = ({

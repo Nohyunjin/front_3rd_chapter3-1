@@ -12,14 +12,14 @@ import {
 
 import { CATEGORIES, NOTIFICATION_OPTIONS } from '../constants/calendar';
 import { useEventForm } from '../hooks/useEventForm';
-import { Event, EventForm as EventFormType } from '../types';
-import { RepeatForm } from './RepeatForm.tsx';
-import { TimeInputs } from './TimeInputs.tsx';
+import { Event } from '../types';
+import { RepeatForm } from './RepeatForm';
+import { TimeInputs } from './TimeInputs';
 import { createEventData, validateEventData } from '../utils/eventHandlers';
 
 interface EventFormContainerProps {
   editingEvent: Event | null;
-  onSubmit: (eventData: EventFormType) => Promise<void>;
+  onSubmit: () => Promise<void>;
 }
 
 export const EventFormContainer = ({ editingEvent, onSubmit }: EventFormContainerProps) => {

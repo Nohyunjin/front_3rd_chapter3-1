@@ -1,13 +1,12 @@
 import { FormControl, FormLabel, HStack, Input, Tooltip } from '@chakra-ui/react';
-import React from 'react';
 
 interface TimeInputsProps {
   startTime: string;
   endTime: string;
   startTimeError: string | null;
   endTimeError: string | null;
-  onStartTimeChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  onEndTimeChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onStartTimeChange: () => void;
+  onEndTimeChange: () => void;
 }
 
 export const TimeInputs = ({

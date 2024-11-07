@@ -20,7 +20,7 @@ import { TimeInputs } from '../TimeInputs';
 
 interface EventFormProps {
   event?: Event;
-  onSubmit: (eventData: EventFormType) => void;
+  onSubmit: () => void;
   onCancel: () => void;
 }
 

@@ -3,8 +3,8 @@ import { HStack, IconButton, Select } from '@chakra-ui/react';
 
 interface CalendarHeaderProps {
   view: 'week' | 'month';
-  onViewChange: (view: 'week' | 'month') => void;
-  onNavigate: (direction: 'prev' | 'next') => void;
+  onViewChange: () => void;
+  onNavigate: () => void;
 }
 
 export const CalendarHeader = ({ view, onViewChange, onNavigate }: CalendarHeaderProps) => {

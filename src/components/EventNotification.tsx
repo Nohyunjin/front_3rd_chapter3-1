@@ -1,10 +1,10 @@
 import { Alert, AlertIcon, AlertTitle, Box, CloseButton, VStack } from '@chakra-ui/react';
 
-import { Notification } from '../types';
+import { Event } from '../types';
 
 interface EventNotificationProps {
-  notifications: Notification[];
-  onClose: (index: number) => void;
+  notifications: Event[];
+  onClose: () => void;
 }
 
 export const EventNotification = ({ notifications, onClose }: EventNotificationProps) => {
@@ -16,9 +16,9 @@ export const EventNotification = ({ notifications, onClose }: EventNotificationP
         <Alert key={index} status="info" variant="solid" width="auto">
           <AlertIcon />
           <Box flex="1">
-            <AlertTitle fontSize="sm">{notification.message}</AlertTitle>
+            <AlertTitle fontSize="sm">{notification.title}</AlertTitle>
           </Box>
-          <CloseButton onClick={() => onClose(index)} />
+          <CloseButton onClick={onClose} />
         </Alert>
       ))}
     </VStack>
